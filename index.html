@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -16,6 +16,7 @@
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 
 </head>
 
@@ -60,7 +61,7 @@
                                 <ul>
                                     <li><a href="index.html">Inicio</a></li>
                                     <li><a href="albums-store.html">Galeria</a></li>
-                                    <li><a href="#">Pages</a>
+                                    <!-- <li><a href="#">Pages</a>
                                         <ul class="dropdown">
                                             <li><a href="index.html">Inicio</a></li>
                                             <li><a href="albums-store.html">Galeria</a></li>
@@ -87,7 +88,7 @@
                                                 </ul>
                                             </li>
                                         </ul>
-                                    </li>
+                                    </li> -->
                                     <li><a href="event.html">Eventos</a></li>
                                     <li><a href="blog.html">Noticias</a></li>
                                     <li><a href="contact.html">Contacto</a></li>
@@ -157,7 +158,123 @@
         </div>
     </section>
     <!-- ##### Hero Area End ##### -->
-
+    <section id="buy-tickets" class="section-with-bg wow fadeInUp has-fluid bg-gray" style="visibility: visible; animation-name: fadeInUp;">
+        <div class="container">
+          <div class="section-header col-12 text-center">
+            <h2>OFERTAS</h2>
+            <p>Nuestras ofertas por tiempo limitado</p>
+          </div>
+    
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="card mb-5 mb-lg-0">
+                <div class="card-body">
+                  <h5 class="card-title text-muted text-uppercase text-center">Paquete oro</h5>
+                  <h6 class="card-price text-center">$4,500</h6>
+                  <hr>
+                  <ul class="fa-ul">
+                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Planteamiento de guión/ Historia.</li>
+                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Video Preview (trailer).</li>
+                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Locaciones gratis.</li>
+                    <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Detras de camaras y/o bloopers.</li>
+                    <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Sesión de fotos (en locación).</li>
+                    <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Volante Promocional.</li>
+                  </ul>
+                  <hr>
+                  <div class="text-center">
+                    <button type="button" class="btn" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="standard-access">Comprar ahora</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card mb-5 mb-lg-0">
+                <div class="card-body">
+                  <h5 class="card-title text-muted text-uppercase text-center">Paquete platino</h5>
+                  <h6 class="card-price text-center">$6,000</h6>
+                  <hr>
+                  <ul class="fa-ul">
+                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Planteamiento de guión/ Historia.</li>
+                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Video Preview (trailer).</li>
+                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Locaciones gratis.</li>
+                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Detras de camaras y/o bloopers.</li>
+                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Volante Promocional.</li>
+                    <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Sesión de fotos (en locación).</li>
+                    
+                  </ul>
+                  <hr>
+                  <div class="text-center">
+                    <button type="button" class="btn" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="pro-access">Comprar ahora</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Pro Tier -->
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title text-muted text-uppercase text-center">Paquete diamante</h5>
+                  <h6 class="card-price text-center"><strike class="text-danger">$10,000</strike> a <span class="text-success">$7,000</span></h6>
+                  <hr>
+                  <ul class="fa-ul">
+                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Planteamiento de guión/ Historia.</li>
+                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Detras de camaras y/o bloopers.</li>
+                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Sesión de fotos (en locación).</li>
+                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Video Preview (trailer).</li>
+                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Volante Promocional.</li>
+                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Locaciones gratis.</li>
+                  </ul>
+                  <hr>
+                  <div class="text-center">
+                    <button type="button" class="btn" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="premium-access">Comprar ahora</button>
+                  </div>
+    
+                </div>
+              </div>
+            </div>
+          </div>
+    
+        </div>
+    
+        <!-- Modal Order Form -->
+        <div id="buy-ticket-modal" class="modal fade">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Comprar paquete</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form method="POST" action="#">
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="nombre" placeholder="Nombre">
+                  </div>
+                  <div class="form-group">
+                    <input type="email" class="form-control" name="correo" placeholder="Correo electronico">
+                  </div>
+                  <div class="form-group">
+                    <input type="number" class="form-control" name="numero-telefonico" placeholder="Telefono">
+                  </div>
+                  <div class="form-group">
+                    <select id="ticket-type" name="ticket-type" class="form-control">
+                      <option value="">-- Selecciona tu paquete --</option>
+                      <option value="standard-access">Paquete Oro</option>
+                      <option value="pro-access">Paquete Platino</option>
+                      <option value="premium-access">Paquete Diamiante</option>
+                    </select>
+                  </div>
+                  <div class="text-center">
+                    <button type="submit" class="btn">Ordena ahora</button>
+                  </div>
+                </form>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+    
+      </section>
     <!-- ##### Latest Albums Area Start ##### -->
     <section class="latest-albums-area section-padding-100">
         <div class="container">
@@ -551,8 +668,8 @@
                 <div class="col-12 col-lg-4">
                     <div class="weeks-top-area mb-100">
                         <div class="section-heading text-left mb-50 wow fadeInUp" data-wow-delay="50ms">
-                            <p>See what’s new</p>
-                            <h2>This week’s top</h2>
+                            <p>Mira lo mas reciente</p>
+                            <h2>eventos</h2>
                         </div>
 
                         <!-- Single Top Item -->
@@ -628,8 +745,8 @@
                 <div class="col-12 col-lg-4">
                     <div class="new-hits-area mb-100">
                         <div class="section-heading text-left mb-50 wow fadeInUp" data-wow-delay="50ms">
-                            <p>See what’s new</p>
-                            <h2>New Hits</h2>
+                            <p>Escucha nuestras producciones</p>
+                            <h2>Audios</h2>
                         </div>
 
                         <!-- Single Top Item -->
@@ -734,8 +851,8 @@
                 <div class="col-12 col-lg-4">
                     <div class="popular-artists-area mb-100">
                         <div class="section-heading text-left mb-50 wow fadeInUp" data-wow-delay="50ms">
-                            <p>See what’s new</p>
-                            <h2>Popular Artist</h2>
+                            <p>Nuestros colaboradores</p>
+                            <h2>Equipo</h2>
                         </div>
 
                         <!-- Single Artist -->
@@ -744,7 +861,8 @@
                                 <img src="img/bg-img/pa1.jpg" alt="">
                             </div>
                             <div class="content-">
-                                <p>Sam Smith</p>
+                                <h6>Gilberto Garcia</h6>
+                                <p>Fotografo</p>
                             </div>
                         </div>
 
@@ -754,7 +872,8 @@
                                 <img src="img/bg-img/pa2.jpg" alt="">
                             </div>
                             <div class="content-">
-                                <p>William Parker</p>
+                                <h6>William Parker</h6>
+                                <p>Camarografo</p>
                             </div>
                         </div>
 
@@ -764,7 +883,8 @@
                                 <img src="img/bg-img/pa3.jpg" alt="">
                             </div>
                             <div class="content-">
-                                <p>Jessica Walsh</p>
+                                <h6>Jessica Walsh</h6>
+                                <p>Maquillaje</p>
                             </div>
                         </div>
 
@@ -774,7 +894,8 @@
                                 <img src="img/bg-img/pa4.jpg" alt="">
                             </div>
                             <div class="content-">
-                                <p>Tha Stoves</p>
+                                <h6>Paul Martinez</h6>
+                                <p>Edición</p>
                             </div>
                         </div>
 
@@ -784,7 +905,8 @@
                                 <img src="img/bg-img/pa5.jpg" alt="">
                             </div>
                             <div class="content-">
-                                <p>DJ Ajay</p>
+                                <h6>Pedro Ruiz</h6>
+                                <p>Luz y Sonido</p>
                             </div>
                         </div>
 
@@ -794,7 +916,8 @@
                                 <img src="img/bg-img/pa6.jpg" alt="">
                             </div>
                             <div class="content-">
-                                <p>Radio Vibez</p>
+                                <h6>Laura Martinez</h6>
+                                <p>Edición</p>
                             </div>
                         </div>
 
@@ -804,7 +927,8 @@
                                 <img src="img/bg-img/pa7.jpg" alt="">
                             </div>
                             <div class="content-">
-                                <p>Music 4u</p>
+                                <h6>Maritza Lopéz</h6>
+                                <p>Edición</p>
                             </div>
                         </div>
 
@@ -872,18 +996,18 @@
                 <div class="col-12 col-md-6">
                     <a href="#"><img src="img/core-img/logo.png" style="width: 120px;height: 100px;" alt=""></a>
                     <p class="copywrite-text"><a href="#"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | MaFex Studio's <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">One Design</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                 </div>
 
                 <div class="col-12 col-md-6">
                     <div class="footer-nav">
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Albums</a></li>
-                            <li><a href="#">Events</a></li>
-                            <li><a href="#">News</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Inicio</a></li>
+                            <li><a href="#">Galeria</a></li>
+                            <li><a href="#">Eventos</a></li>
+                            <li><a href="#">Noticias</a></li>
+                            <li><a href="#">Contacto</a></li>
                         </ul>
                     </div>
                 </div>
